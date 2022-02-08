@@ -1,0 +1,55 @@
+Dartpad=>make only for Codining in dart(2011 )
+Api=>application programming interface(backend store)=>call api
+fb.com=>/
+
+
+syntax :
+void main(){ //main code
+}
+
+main=>predefine function (coding start with this  function)
+
+
+
+void =>keyword=> no return anything
+
+main file name =>main.dart
+print=>print something
+print("data")
+
+1) make 3 type of application 
+a) Console Application=>cmd
+b) Mobile Application(android,ios)=>apk=>types of apk (debug,release)
+c) Website=>run in browser
+
+open source=>access code of any app or website
+Flutter =>userinterface software kit
+Cross Platform => Create Code only one=>change in both app 
+
+Framework=>
+libary=>
+
+https://pub.dev/
+
+Flutter sdk=>download and install (c:/)
+C:\flutter\bin\cache\dart-sdk\bin 
+
+Search =>Environmnet Variable
+Add path in user variable =>in path
+
+
+Search in cmd=>dart
+IN VS CODE =>EXTENSION
+First Make folder=>
+Then make File=>main.dart
+then 
+void main(){
+print("Message");
+}
+then 
+Run=>dart filename.dart
+;=>statment Terminator
+
+
+
+
