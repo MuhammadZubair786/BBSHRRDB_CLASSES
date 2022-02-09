@@ -1,0 +1,4 @@
+Get Input From User :
+std=>standard(input,output)
+
+Ascii=>amercian Standard Code internation 
