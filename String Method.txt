@@ -1,0 +1,45 @@
+var b = "DBCD"
+STRING: CHARACTER
+
+1).toUpperCase()=>all letter in capital=> a.ToUpperCase()=>ZEBTECH=>STRING
+2).toLowerCase()=>small letter=>a.toLowerCase()=>zebtech=>STRING
+
+3).indexOf()=>get caharcter any index =>a.indexOf("e")=>1=>int
+12)lastIndex=>GET  INDEX ON SPECFIC CHARACTER BUT START WITH END=>a.lastIndexOf("e")=>4=>int
+
+4).CodeUnitAt=>ascii code get specfic index=>b.CodeUnitAt(1)=>66=>int
+5).CodeUnits=>All Ascii Code Get=>b.codeUnits()=>65,66,67,68=>list of int
+"
+6).split()=>break with any specfic symbol>a.split("e","-")=>Z-bt-ch=>list
+
+7).replaceAll=>first find letter and then relpace all value=>a.replaceAll("e","a")=>Zabtach=>string
+8).replaceFirst=>first find letter and then replace First=>a.replaceFirst("e","a")=>Zabtech=>string
+
+
+9).startWith=>CHECK VALUE ITS START WITH THIS CHARACTER/WORD=>a.startWith("d")=>false=>bool
+
+10).endsWith=>CHECK VALUE ITS END WITH THIS CHARACTER/WORD=>a.endsWith("he")=>true=>bool
+
+11)contains=>CHECK THIS CHARACTER/WORD PRESENT IN STRING OR NOT=>a.contains("e")=>true=>bool
+
+var a = "Z b t c h e c h"
+str a= 10
+subString(start,end-1)
+`	(4,7-1)=>4,5,6,
+
+13)substring=>GET SPECFIC INDEX =>STRING=>a.subString(4,6)=>tc=>String
+14).tosTring()=>CONVERT INTO STRING=>a.toString()=>String
+15)CompareTo=>TWO STRING COMPARE=>int
+16)padLeft=>use For Space In Left =>a.padLeft(2,"*")=>
+17)padRight=>use For Space In right Side=>a.padRight(4,"*")
+
+
+
+property=>5) .runTimeType
+.length
+
+
+if(a==""){
+}
+.isEmpty=>"data"=>false=>""=>true
+.isNotEmpty"data"=>true=>""=>false
