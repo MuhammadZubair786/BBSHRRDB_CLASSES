@@ -1,0 +1,36 @@
+int,String,bool,double=>store only onre value
+List => collection of element/data/value
+types:
+	Hetergenous =>data store different data type
+	programming language: (dart)
+	exp=>
+		12,asad,omer,true (not error)
+		12,34,56,67 (not error)
+		asad,omer,ali,akber
+
+	Homogenous=>data store same data type
+	example programming langugae=>c
+	
+	exp=>
+		12,45,56,78,"asad"(error)
+		omer,asad,34(error)
+
+data store in list as indexing number
+index number start with 0
+consective memory location
+a=[5]
+syntax
+
+[]=>square bracket
+DataType variablename = [];  =>not a fixed list 
+List array = [1,2,3,4,5];
+get spifice value then use=>arr[index]
+update value =>array[index]=value;
+add new value => .add()=>add value in last
+sorting data =>.sort()=>method
+reversed=>property
+
+linked link=>data store in node
+data    |   address
+
+
