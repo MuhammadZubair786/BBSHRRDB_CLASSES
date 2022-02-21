@@ -1,0 +1,104 @@
+int,String,bool,double=>store only one value
+List => collection of element/data/value
+types:
+	Hetergenous =>data store different data type
+	programming language: (dart)
+	exp=>
+		12,asad,omer,true (not error)
+		12,34,56,67 (not error)
+		asad,omer,ali,akber
+
+	Homogenous=>data store same data type
+	example programming langugae=>c
+	
+	exp=>
+		12,45,56,78,"asad"(error)
+		omer,asad,56,true,(error)
+
+data store in list as indexing number
+index number start with 0
+consective memory location
+a=[1,2,3,4,5,6]
+a[5]=>
+syntax
+
+[]=>square bracket
+
+a[10] =9 index 10index   11 index
+DataType variablename = [];  =>not a fixed length
+List arr = [1,2,3,4,5];
+a(23)
+get spifice value then use=>arr[index]
+length=>get total element in list(count start 1)=>property
+a=[1,2,3,"smit"]
+.last=>property=>get last element
+.first=>get first element
+update value =>array[index]=value;
+
+a=[1,2,3,4,]
+ar[4]="smit"  
+
+
+
+
+[1,2,3,4]
+.ADD("omer")=> [1,2,3,4,"omer"]
+.Add(["omer","ali","asad"])=>a=>[1,2,3,4,"omer",["omer","ali","asad"]]  
+a[5 ]=>,["omer","ali","asad"]
+a[5][1]=>ali
+
+a=[1,2,3]
+"smit"
+a.insert(2,"smit")
+
+.insert(indexnumber,[value])=>
+.insert(2,["asad","omer"])
+[1,2,3,4,"omer",["omer"],["ali"],["asad"]]  
+[1,2,["asad","omer"],3,4,"omer",["omer"],["ali"],["asad"]]  
+
+
+
+
+
+
+
+
+
+
+add new value => .add()=>add value in last
+sorting data =>.sort()=>method(ascending)
+reversed=>property
+
+linked link=>data store in node
+Asad   |   203
+
+
+replaceRange=>use for replace specific index numbers
+.replaceRange(start,end-1,"value")
+a[1,2,3,6,7,8,9,10]
+a.replaceRange(3,7,["smit","gdgg",shhshs]
+.elementAt(index)=>get specfic index number
+
+a.fillRange=>use for change value in index number
+a.fillRange(start,end-1,["value"])
+.split=>string into list=>break with according
+.join=>list into string=>,
+
+.indexOf(value)=>get value index number
+
+.contains(value)=>use for check value present or not
+.indexWhere=>use for get value index number
+.indexWhere((elem) => elem  ==4)
+if get element =>return index  number
+if not get elemt => return -1
+
+.clear()=>use for delete element
+
+
+
+
+
+
+
+
+
