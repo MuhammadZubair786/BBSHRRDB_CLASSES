@@ -1,24 +1,47 @@
 import 'dart:io';
 
-void main() {
-  int cr = int.parse(stdin.readLineSync()!);
- 
-  CheckNotes(cr);
+void main(){
+
+// print(square(4)); //16
+// var b = square(3); //call function
+// print(square(5));
+// var c = cube(b); //cube(9)=>9*9(9=>)81*9=>729
+// print(c);
+stdout.write("Enter First Name");
+var b = stdin.readLineSync()!;
+stdout.write("Enter Second Name");
+var c = stdin.readLineSync()!;
+var d = validate(b,c);
+print("result ${d}");
 }
 
-void CheckNotes(cr) {
-  num h = cr ~/ 100;   //mera note 470/100=4
-  print(h);  //4
+validate(a1,b1){
+  if(a1.toString().length==0 || b1.toString().length==0){
+    print("Enter All data");
+    return "Enter All data" ;
+     
+  }
+  else if(a1.toString().length!=0 || b1.toString().length!=0){
+   return  datasave(a1, b1);
+  }
 
-  num r = cr % 100; // return 470%100=>70
-
-  num fty = r ~/ 50; //70~/50=1
-  
-    print(fty);
- 
-  num t1 = cr % 50; // 20
-  num ten = t1 ~/ 10; //20/10
-  
-    print(ten);
-  
 }
+
+datasave(fn,ln){
+  
+ return "${fn},${ln}";
+}
+
+// square(){ //define
+
+//   //  var a = 5;
+//   //  var b =10;
+//   //  var d = (a+b)/a-b;
+//   //  return d;
+
+// }
+
+// cube(a){
+//   return a*a*a;
+
+// }
