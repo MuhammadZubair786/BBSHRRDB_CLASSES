@@ -1,47 +1,31 @@
-import 'dart:io';
-
 void main(){
+  // var data = {1,34,67,23,100};      // {1,34,67,23,100,56//,109}
 
-// print(square(4)); //16
-// var b = square(3); //call function
-// print(square(5));
-// var c = cube(b); //cube(9)=>9*9(9=>)81*9=>729
-// print(c);
-stdout.write("Enter First Name");
-var b = stdin.readLineSync()!;
-stdout.write("Enter Second Name");
-var c = stdin.readLineSync()!;
-var d = validate(b,c);
-print("result ${d}");
+  // var data1= {34,56,23,109};
+  // data.forEach((element) {
+  //   print("data : ${element}");
+  // });
+
+  // data.addAll({12,23,3});
+
+  // print(data);
+
+  // print(data.elementAt(0));
+// print(data.difference(data1));//set1 remove element which same as set 2=>return not same
+
+// print(data.intersection(data1));//get common from both set
+
+// print(data.union(data1)) ;
+List a =[1,2,3,4,5];
+var b = a.fold(5, (previous, element) => 
+  element + previous);
+
+
+
+// precious=>15
+// element=5
+// 15+5=>20
+
+
+print(b);
 }
-
-validate(a1,b1){
-  if(a1.toString().length==0 || b1.toString().length==0){
-    print("Enter All data");
-    return "Enter All data" ;
-     
-  }
-  else if(a1.toString().length!=0 || b1.toString().length!=0){
-   return  datasave(a1, b1);
-  }
-
-}
-
-datasave(fn,ln){
-  
- return "${fn},${ln}";
-}
-
-// square(){ //define
-
-//   //  var a = 5;
-//   //  var b =10;
-//   //  var d = (a+b)/a-b;
-//   //  return d;
-
-// }
-
-// cube(a){
-//   return a*a*a;
-
-// }
