@@ -6,172 +6,114 @@ void main() {
 
 class MyApp extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   @override
-  void Data() {
-    print("Call Function");
-  }
+  List a = [];
+  var hour = DateTime.now().hour;
+  var minute = DateTime.now().minute;
+  var second = DateTime.now().second;
+  var milisecond = DateTime.now().millisecond;
+
+  // void addNewData() {
+  //   // a.add("Add New DATA");
+  //   // print(a);
+  //   if (a.length >= 5) {
+  //     print("Not more than Five");
+  //   } else {
+  //     a.add("Add New DATA");
+  //     print(a);
+  //   }
+  // }
 
   Widget build(BuildContext context) {
+    Future.delayed(Duration(microseconds: 1), () { //flutter time after run
+      setState(() {
+        hour = DateTime.now().hour;
+        minute = DateTime.now().minute;
+        second = DateTime.now().second;
+        milisecond = DateTime.now().millisecond;
+      });
+    });
     return MaterialApp(
-        home: Scaffold(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Button Class"),
+        ),
+        body: Column(
+          children: [
+            Row(
+              children: [Text("${hour}:${minute}:${second}:${milisecond}")],
+            )
+            // SizedBox(
+            //   height: 100,
+            // ),
+            // // ElevatedButton.icon(
+            // //     onPressed: () {},
+            // //     icon: Icon(Icons.add_location_alt_sharp),
+            // //     label: Text(""),
+            // //     //  label: Text("")
+            // //     style: ButtonStyle(
+            // //         foregroundColor: MaterialStateProperty.resolveWith((s) {
+            // //       if (s.contains(MaterialState.pressed)) {
+            // //         return Colors.pink;
+            // //       }
+            // //       return Colors.transparent;
+            // //     })))
 
-            // body: Column(
-            //   children: [
-            //     Padding(
-            //       padding: const EdgeInsets.all(8.0),
-            //       child: Center(
-            //         child: ElevatedButton(
-            //           //  default Blue
-            //           onPressed: Data,
-            //           onLongPress: () {
-            //             print("double click");
-            //           },
-            //           // onPressed:
-            //           // (){print("");
-            //           // },  //Function Call
-            //           child: Container(
-            //             width: 100,
-            //             child: Row(
-            //               children: [
-            //                 Icon(Icons.star),
-            //                 Text("Click me"),
-            //               ],
-            //             ),
-            //           ),
-            //           style: ElevatedButton.styleFrom(
-            //               //Style changing
-            //               onPrimary: Colors
-            //                   .black, // onprimary properties =>text color change
-            //               primary: Colors
-            //                   .red, //primary change color ElevatedButton Change bg
-            //               // elevation: 100,
-            //               shadowColor: Colors.cyanAccent,
-            //               side: BorderSide(
-            //                 //side Button Border
-            //                 width: 1,
-            //                 color: Colors.blue,
-            //               ),
-            //               shape: RoundedRectangleBorder(
-            //                   //border Radius set
-            //                   borderRadius: BorderRadius.circular(20))),
-            //         ),
-            //       ),
-            //     ),
-            //     ElevatedButton.icon(
-            //         onPressed: () {},
-            //           onLongPress: () {
-            //             print("double click");
-            //           },
-            //         icon: Icon(Icons.ac_unit_sharp),
-            //         label:Text("kdjdkdkkdk")),
-            //     IconButton(
-            //       //bedefault color =>no
-            //       icon: Container(
-            //           color: Colors.red,
-            //           child: Icon(
-            //             Icons.search,
-            //             color: Colors.white,
-            //           )),
-            //       onPressed: () {},
-            //     ),
-            //     TextButton(
-            //         //bg color , text blue
+            // // IconButton(
+            // //   icon: Icon(Icons.event_busy_sharp),
+            // //   onPressed: (){},
+            // //   color: Colors.red,
+            // //   )
 
-            //         onPressed: () {},
-            //          style: ButtonStyle(
-            //           backgroundColor: MaterialStateProperty.resolveWith((states) {
-            //         if (states.contains(MaterialState.pressed)) {
-            //           return Colors.pink;
-            //         }
-            //          if (states.contains(MaterialState.hovered)) {
-            //           return Colors.green;
-            //         }
-            //         return Colors.brown; // Defer to the widget's default.
-            //       })),
-            //         child: Text("Click")),
-            //          OutlinedButton(
-            //            onPressed: (){},
-            //            child: Text("Click Dtaa"),
-            //            style: ButtonStyle(
-            //          foregroundColor: MaterialStateProperty.resolveWith((states) {
-            //         if (states.contains(MaterialState.pressed)) {
-            //           return Colors.pink;
-            //         }
-            //          if (states.contains(MaterialState.hovered)) {
-            //           return Colors.green;
-            //         }
-            //         return Colors.brown; // Defer to the widget's default.
-            //       })),
-            //          )
-            //   ],
+            // // TextButton.icon(onPressed: onPressed, icon: icon, label: label)
+
+            // TextButton(
+            //   onPressed: (){},
+            //    child: Text("click"),
+            // // style: ButtonStyle(
+            // // backgroundColor: MaterialStateProperty.resolveWith((s) {
+            // //       if (s.contains(MaterialState.focused)) {
+            // //         return Colors.pink;
+            // //       }
+            // //          if (s.contains(MaterialState.selected)) {
+            // //         return Colors.brown;
+            // //       }
+            // //       return Colors.black; //if not same as any condition
+            // // }
+            // // )
+            // // )
+            // style: ElevatedButton.styleFrom(
+            //   // primary: Colors.red,// background color
+            //   // onPrimary: Colors.blue,//font color
+
+            //   side: BorderSide(
+            //     width: 2,
+            //     color: Colors.red,
+            //     style: BorderStyle.solid
+            //   ),
+            //   shape: RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.circular(20)
+            //   ),
+            //   shadowColor: Colors.pink,
+            //   elevation: 10
 
             // ),
-            // body: GridView.count(
-            //   crossAxisCount: 10,
-            //   mainAxisSpacing: 100,
-            //   children: [
-            //     Container(
-            //       color: Colors.red,
-            //       width: 100,
-            //       height: 100,
-            //     )
-            //   ],
-            //   ),
-            body: ElevatedButton(
-                       onPressed: (){},
-                       child: Text("Click Dtaa"),
-                       style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith((states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.pink;
-                    }
-                     if (states.contains(MaterialState.hovered)) {
-                      return Colors.green;
-                    }
-                    return Colors.brown; // Defer to the widget's default.
-                  })
-                  )
-                  )
-        )
+            // ),
+            // SizedBox(height: 100,),
+            // OutlineButton(onPressed: (){},child: Text("Click"),),
+
+            // ElevatedButton(onPressed: addNewData,
+            // child: Text("add Data in List"))
+          ],
+        ),
+        // floatingActionButton: FloatingActionButton.extended(
+        //   onPressed: (){}, label: Icon(Icons.accessibility_new_rounded)),
+        //   floatingActionButtonLocation: FloatingActionButtonLocation.startTop
+      ),
     );
-
-    //     Card(
-    //       elevation: 100,
-    //       child: Container(
-    //         height: 120,
-    //         width: 100,
-    //         child: Column(
-    //           children: [
-    //             Text("hdhdhdhh"),
-    //             ElevatedButton(onPressed: (){}, child: Text("djdjdjj"))
-    //           ],
-    //         ),
-
-    //     //     // color: Colors.red,
-    //     //     width: 100,
-    //     //     height: 100,
-
-    //     //   ),
-    //     // ),
-
-    //   //   // floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-    //   //   floatingActionButton: FloatingActionButton(
-
-    //   //     backgroundColor: Colors.red,
-    //   //     onPressed: (){print("djdhjdjdj");},
-    //   //     child: Text("Click"),
-
-    //   //     ),
-    //   //     floatingActionButtonLocation: FloatingActionButtonLocation.miniEndTop,
-
-    //   // ),
-    //       )
-    // )
-    //   )
-    // );
   }
 }
