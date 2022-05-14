@@ -1,0 +1,102 @@
+hosting=>use for deploy page on internet
+auth=>use for user create account and signin
+real time=>store database faster than second database(object)
+firestore=>store database but in the form of collections and ref
+5) storage=>use for store images,video,audio files and pdf files
+1 project storage free access =>1 Gb
+
+
+Storage:
+step : 1=>ADD dendencies in Pubspec.yaml file
+:flutter pub add firebase_storage
+
+step: 2:
+check firebase
+
+step : 3
+enable firebase storage=>rules true
+
+step : 4
+video picker
+image picker
+
+   final ImagePicker _pick=ImagePicker();
+    final image = await _pick.getImage(source: ImageSource.gallery);
+
+
+print(image);
+
+
+step : 5
+image upload in stroage and get url
+
+for get base name =>
+import : import 'package:path/path.dart' as path;
+path.baseName(imagepath)
+
+make instance with refence name where to upload image
+firebase_storage.Reference ref =
+           firebase_storage.FirebaseStorage.instance.ref('student/${imageName}');
+
+
+image convert into byte formate
+      File file = File(imagepath);
+
+
+put file in storage
+  await ref.putFile(file);
+
+get download url from firebase storage
+ String downlaodURL = await ref.getDownloadURL();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
