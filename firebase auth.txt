@@ -1,0 +1,174 @@
+Step : 1
+add firebase dependence
+a)firebase_core
+
+1)flutter pub add firebase_core(use for access firebase services)
+2)flutter pub add firebase_auth(use for auth services)
+
+Step : 2
+firebase console : create new project
+
+Step : 3
+add app (andriod,ios,web)
+get package name : location(andriod>src>app>main>AndriodMangiest.xyml)=>copy
+
+download googleservices =>paste into andriod>app
+
+step : 4
+
+andiod>build.gradle
+
+check : google()
+
+add line:under dependices object 
+classpath 'com.google.gms:google-services:4.3.10'
+
+
+step : 5
+andriod>app>build.gradle
+
+coding :
+1) main.dart
+
+a) import firebase_core
+b)befor written runApp(): add this line :
+ WidgetsFlutterBinding.ensureInitialized();
+
+c)after class stateful widgets:
+  final  Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
+d) use future Builder Widget
+1)future:_initialization
+2)builder: statement
+
+builder: (context, snapshot){
+       if(snapshot.hasError){
+         return Container(
+child:Text("Your Internet ");
+       }
+       if(snapshot.connectionState==ConnectionState.done){
+         return MaterialApp(
+           home: Scaffold(
+
+             body: Signup()
+           ),
+          //  routes: {
+          //    "/Home":
+          //  },
+         );
+       }
+       return Container();
+      } ,
+
+
+
+1)Email password: user account created
+
+
+TextEditingController controllname = TextEditingController();=>use for store data from textfield
+
+controller =>access which texteditiong controller
+
+2)FirebaseAuth auth = FirebaseAuth.instance;
+
+
+async and wait 
+
+3)Firebase Database services :
+a)Real Time=>speed ful database(ref)
+b)Firestore=>run time not update (document)
+
+
+:add firebase database  realtime
+step: 1
+1)flutter pub add firebase_database
+
+step : 2
+import 'package:firebase_database/firebase_database.dart';
+
+step :3
+DatabaseReference db = FirebaseDatabase.instance.ref("colection name");
+
+ref=>collection=>firebase method
+admin
+student
+teacher 
+
+ref=>
+user
+friend_list
+chat
+
+step : 4 
+got to firebase console  and active realtime  database 
+
+1)real time data base 
+1)location
+2) validate
+write and read =>true
+
+
+step 5:
+object =>Map(key value pair)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

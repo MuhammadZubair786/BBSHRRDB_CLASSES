@@ -1,0 +1,84 @@
+Firebase data add(storage,database (Real,firstore),authetication)
+
+firebase data get and show on pages
+
+1) import 'package:firebase_database/firebase_database.dart';
+
+get all refernce data :
+getfirebasedata(){
+  DatabaseReference userRef =
+        FirebaseDatabase.instance.reference().child('Products');
+    final data =
+        await userRef.once().then((DataSnapshot snapshot) {
+      var values = snapshot.value;
+}
+
+get speific data :
+getfirebasedata(){
+  DatabaseReference userRef =
+        FirebaseDatabase.instance.reference().child('Products');
+    final data =
+        await userRef.child("Thing").child("Rice").once().then((DataSnapshot snapshot) {
+      var values = snapshot.value;
+}
+get speific value data :
+
+getfirebasedata(){
+  DatabaseReference userRef =
+        FirebaseDatabase.instance.reference().child('Products');
+    final data =
+        await userRef.once().then((DataSnapshot snapshot) {
+      var values = snapshot.value;
+
+if(){values.values.toList["email"]=="email"){
+}
+
+
+Get Data Order Wise by specific value:
+
+await db.orderByChild("email").equalTo(useremail).once().then((DataSnapshot snapshot) {
+    // print(snapshot.value);
+    data = snapshot.value;
+  });
+
+
+get key  :
+data.key,
+
+values :
+data.values
+
+convert data into list :
+data.values.toList()
+
+get specfic value 
+data.values.toList()[indexnumber]["values"]
+
+get object with in object :
+data.values.toList()[indexnumber]["key"].values
+data.values.toList()[0]["address"].values
+
+
+send data one page to other :
+ Navigator.push(context, MaterialPageRoute(builder: 
+  (context)=>Home(data )));
+
+next page :
+var variable;
+home(this.variable)
+
+
+
+
+address :{
+zip_code:12,
+city:dkkfkdf,
+
+
+}
+ 
+
+
+
+
+
